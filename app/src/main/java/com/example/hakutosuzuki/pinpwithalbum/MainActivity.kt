@@ -21,7 +21,6 @@ import java.io.IOException
 class MainActivity : AppCompatActivity() {
     private var imageView: ImageView? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
