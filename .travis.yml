@@ -1,34 +1,6 @@
-language: android
-android:
+language: java
 sudo: false
-
-components:
-  - tools
-  - platform-tools
-  - build-tools-23.0.2
-  - android-23
-  - extra
-  - extra-android-m2repository
-
-install:
-  - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
-  - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-23.0.2
-  - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=android-23
-  - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-android-m2repository
-  - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-google-m2repository
-
-env:
-  global:
-  - GRADLE_OPTS="-Xmx512m -XX:MaxPermSize=512m"
-  - ADB_INSTALL_TIMEOUT=10
-
 jdk:
-  - oraclejdk7
-
+    - oraclejdk7
 script:
-  - ./gradlew test
-
-cache:
-  directories:
-  - $HOME/.m2
-  - $HOME/.gradle
+    - ./gradlew test
